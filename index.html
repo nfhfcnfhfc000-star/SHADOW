@@ -156,10 +156,7 @@ var ph=document.getElementById('ph');
 ph.addEventListener('input',function(){var d=ph.value.replace(/\D/g,'');if(d.indexOf('38')==0)d=d.slice(2);d=d.slice(0,10);
   var o='+38 ';if(d.length)o+='('+d.slice(0,3);if(d.length>3)o+=') '+d.slice(3,6);if(d.length>6)o+='-'+d.slice(6,8);if(d.length>8)o+='-'+d.slice(8,10);ph.value=d.length?o:''});
 ph.addEventListener('focus',function(){if(!ph.value)ph.value='+38 (0'});
-
-// ===== ВІДПРАВКА ЗАЯВКИ В TELEGRAM + ЛІД У META (FACEBOOK) =====
-// УВАГА: без сервера токен видно в коді сторінки. Використовуйте окремого бота тільки для заявок.
-var TG_TOKEN='8445022293:AAG_h4fuPQMsAzDd2o5-i2Maek3xi3F9PB0';   // від @BotFather
+var TG_TOKEN='8445022293:AAFe3sicNbFqv7wFnfyq4brXUq7OjobyJ7M';   
 var TG_CHAT_ID='567800143';    // ваш id або id групи
 document.getElementById('f').addEventListener('submit',function(e){
   e.preventDefault();
