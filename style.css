@@ -1,0 +1,86 @@
+/* ===== Змінні кольорів ===== */
+:root{--g:#2e7d32;--gl:#e8f5e9;--r:#e53935;--y:#ffd600;--b:#0057b8;--t:#1d2b1f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Montserrat,Arial,sans-serif;background:#d5e3d7;color:var(--t);line-height:1.45}
+h1,h2,h3,.new,.top b,.n{font-family:Rubik,Montserrat,Arial,sans-serif}
+.col{max-width:480px;margin:0 auto;background:#fff;padding-bottom:70px;overflow:hidden;box-shadow:0 0 30px #0002}
+section{padding:28px 16px}
+.alt{background:linear-gradient(#f3faf3,#e6f3e7)}
+h2{font-size:25px;font-weight:800;text-align:center;margin-bottom:14px;line-height:1.2}
+h2 span,.gr{color:var(--g)}
+p{margin-bottom:8px}
+img{width:100%;display:block;border-radius:16px;box-shadow:0 6px 18px #0002}
+.mt{margin:14px 0}
+/* Шапка */
+.top{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--g);color:#fff;padding:10px}
+.top img{width:34px;height:34px;border-radius:8px;box-shadow:none}
+.top b{font-size:26px;letter-spacing:3px}
+.top span{font-size:11px;font-weight:600;background:#fff;color:var(--b);border-radius:20px;padding:4px 8px}
+.flag{height:6px;background:linear-gradient(90deg,var(--b) 50%,var(--y) 50%)}
+/* Головний блок */
+.hero{background:linear-gradient(#fff,#f1f8f1)}
+.hero h1{font-size:26px;text-align:center;line-height:1.15;margin-bottom:6px}
+.ua{text-align:center;color:var(--b);font-weight:800;font-size:13px;margin-bottom:12px}
+/* Кнопки */
+.btn{display:block;width:100%;background:linear-gradient(#ff5147,var(--r));color:#fff;border:0;border-radius:14px;padding:18px;font:800 18px Montserrat,Arial;text-align:center;text-decoration:none;cursor:pointer;animation:pulse 1.6s infinite;margin:14px 0;box-shadow:0 6px 16px #e5393559}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+@media(prefers-reduced-motion:reduce){.btn{animation:none}html{scroll-behavior:auto}}
+/* Таймер і банер */
+.timer{text-align:center;padding:14px 16px 6px}
+.timer b{display:block;font-size:14px;margin-bottom:8px;font-family:Montserrat}
+.tm{display:flex;gap:8px;justify-content:center}
+.tm div{background:linear-gradient(#2f4a33,var(--t));color:#fff;border-radius:10px;padding:8px 0;width:78px;font-size:30px;font-weight:800}
+.tm small{display:block;font-size:11px;font-weight:400;opacity:.8}
+.banner{background:linear-gradient(90deg,#c62828,var(--r));color:#fff;text-align:center;font-weight:800;font-size:15px;padding:12px 14px;margin:10px 0 14px}
+.banner.full{margin:10px -16px 14px}
+.badges{display:flex;gap:6px;margin:14px 0}
+.badges div{flex:1;background:var(--gl);border:1px solid #cfe5d1;border-radius:12px;padding:10px 4px;text-align:center;font-size:12px;font-weight:600}
+.badges i{display:block;font-size:22px;font-style:normal}
+/* Ціна */
+.price{text-align:center;margin:8px 0}
+.old{color:#888;text-decoration:line-through;font-size:16px}
+.disc{display:inline-block;background:var(--y);color:#000;font-weight:800;border-radius:8px;padding:4px 12px;margin:6px 0;transform:rotate(-2deg)}
+.new{font-size:52px;font-weight:800;color:var(--r);line-height:1}
+/* Розміри */
+.sh{text-align:center;font-size:20px;margin:16px 0 4px;scroll-margin-top:12px}
+.sizes{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:10px 0}
+.sz{border:2px solid #cfd8cf;border-radius:12px;padding:10px 6px;text-align:center;font-weight:600;font-size:14px;cursor:pointer;background:#fff;transition:.15s}
+.sz b{display:block;color:var(--r);font-size:19px}
+.sz.on{border-color:var(--g);background:var(--gl);box-shadow:0 0 0 3px #2e7d3230}
+/* Списки */
+ul.chk{list-style:none;margin-top:6px}
+ul.chk li{padding:6px 0 6px 32px;position:relative;font-weight:600}
+ul.chk li:before{content:"✓";position:absolute;left:0;color:#fff;background:var(--g);width:23px;height:23px;border-radius:50%;text-align:center;font-size:14px;line-height:23px}
+.left{text-align:center;font-size:17px;margin-top:14px}.left b{color:var(--r);font-size:24px}
+.slogan{text-align:center;color:var(--g);font-weight:800;margin-bottom:10px}
+/* Картки переваг */
+.card{margin-bottom:24px;background:#fff;border-radius:18px;padding:14px;box-shadow:0 4px 16px #0001}
+.card .n{font-size:52px;font-weight:800;color:#cfe6d1;line-height:1;margin-bottom:6px}
+.card img{box-shadow:none}
+.card h3{font-size:20px;margin:10px 0 4px;color:var(--g)}
+/* Таблиця, характеристики */
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:10px 6px;border-bottom:1px solid #e3e8e3;text-align:left;vertical-align:top}
+th:nth-child(2),td:nth-child(2){background:var(--gl);font-weight:600;color:var(--g)}
+td.x{color:var(--r)}
+.spec{margin-top:14px}.spec li{list-style:none;padding:10px 0;border-bottom:1px solid #d5e6d6}
+/* Відгуки */
+.rate{text-align:center;margin-bottom:12px}.rate b{font-size:48px;font-family:Rubik}.rate div{color:#f5a623;font-size:26px}
+.rev{background:#fff;border:1px solid #d9e6da;border-radius:14px;padding:14px;margin-bottom:12px;box-shadow:0 3px 10px #0001}
+.rh{display:flex;gap:10px;align-items:center;margin-bottom:6px}
+.av{width:42px;height:42px;border-radius:50%;background:var(--g);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;flex:none}
+.st{color:#f5a623}.ok{color:var(--g);font-size:12px;font-weight:600;margin-bottom:4px}
+/* Кроки */
+.step{display:flex;gap:12px;margin-bottom:14px}
+.step i{flex:none;width:38px;height:38px;border-radius:50%;background:var(--g);color:#fff;font:800 18px/38px Montserrat;text-align:center}
+/* Форма */
+form{background:var(--gl);border:1px solid #cfe5d1;border-radius:16px;padding:16px;margin-top:14px}
+form h3{text-align:center;font-size:20px;margin-bottom:10px}
+input,textarea{width:100%;padding:16px;border:2px solid #cfd8cf;border-radius:12px;font:600 16px Montserrat,Arial;margin-bottom:10px;resize:none}
+.thanks{display:none;background:var(--g);color:#fff;border-radius:12px;padding:18px;text-align:center;font-weight:600;margin-top:10px}
+footer{text-align:center;font-size:12px;color:#777;padding:0 16px 20px}footer a{color:#777}
+/* Липка панель */
+.bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:#fff;box-shadow:0 -3px 12px #0003;padding:8px 12px;display:flex;align-items:center;gap:10px;z-index:9}
+.bar small{font-size:11px;display:block}.bar b{font-size:20px;color:var(--r)}
+.bar a{flex:1;background:var(--r);color:#fff;text-decoration:none;text-align:center;font-weight:800;border-radius:12px;padding:13px 4px}
