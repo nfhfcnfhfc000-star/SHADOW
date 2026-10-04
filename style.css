@@ -84,3 +84,5 @@ footer{text-align:center;font-size:12px;color:#777;padding:0 16px 20px}footer a{
 .bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:#fff;box-shadow:0 -3px 12px #0003;padding:8px 12px;display:flex;align-items:center;gap:10px;z-index:9}
 .bar small{font-size:11px;display:block}.bar b{font-size:20px;color:var(--r)}
 .bar a{flex:1;background:var(--r);color:#fff;text-decoration:none;text-align:center;font-weight:800;border-radius:12px;padding:13px 4px}
+/* Акція */
+.promo{background:linear-gradient(90deg,var(--y),#ffb300);color:#1d2b1f;text-align:center;font-weight:800;font-size:15px;border-radius:12px;padding:12px;margin:12px 0;border:2px dashed #e53935}

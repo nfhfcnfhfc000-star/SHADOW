@@ -30,6 +30,7 @@ fbq('init','PIXEL_ID');fbq('track','PageView');
 <img src="img/winter2.png" alt="Чохол SHADOW взимку"><!-- q1: головне фото -->
 <div class="badges"><div><i>🚚</i>Доставка по Україні</div><div><i>⏳</i>Обмежена пропозиція</div><div><i>💵</i>Оплата при отриманні</div></div>
 <div class="price"><div class="old">Звичайна ціна: <span class="po">100</span> грн</div><div class="disc">Знижка -<span class="pd">30</span>%</div><div class="new"><span class="pn">70</span> грн</div></div>
+<div class="promo">🎁 <b>АКЦІЯ!</b> Від 5 шт — знижка на все замовлення!</div>
 <a class="btn" href="#sizes">Замовити по знижці</a>
 <ul class="chk"><li>Захист від морозу, вітру й опадів</li><li>Пропускає повітря та вологу</li><li>Швидко одягається, затягується шнурком</li><li>Екологічно чистий, нетоксичний матеріал</li><li>Багаторазове використання</li></ul>
 <p class="left">Залишилось <b>14</b> шт по знижці</p>
@@ -105,6 +106,7 @@ fbq('init','PIXEL_ID');fbq('track','PageView');
 <h3 id="sizes" class="sh">Оберіть розмір</h3>
 <div class="sizes"></div>
 <div class="price"><div class="old">Звичайна ціна: <span class="po">100</span> грн</div><div class="disc">Знижка -<span class="pd">30</span>%</div><div class="new"><span class="pn">70</span> грн</div></div>
+<div class="promo">🎁 <b>АКЦІЯ!</b> Від 5 шт — знижка на все замовлення!</div>
 <!-- сюди вставити обробник форми / CRM (відправка в Telegram — у скрипті внизу) -->
 <form id="f" action="" method="post" novalidate>
 <h3><b class="gr">Залиште заявку</b> та отримайте консультацію</h3>
@@ -126,13 +128,12 @@ fbq('init','PIXEL_ID');fbq('track','PageView');
 <script>
 // ===== Розміри, коди й ціни (old — стара ціна, змініть за потреби) =====
 var S=[
- {s:"40×60",  code:"ЧДСР000001",price:70, old:100},
- {s:"60×70",  code:"ЧДСР00001", price:80, old:115},
- {s:"70×100", code:"ЧДСР00002", price:95, old:135},
- {s:"93×120", code:"ЧДСР00003", price:125,old:175},
- {s:"110×140",code:"ЧДСР00004", price:135,old:190},
- {s:"100×200",code:"ЧДСР000051",price:180,old:255},
- {s:"140×200",code:"ЧДСР00005", price:220,old:310}];
+ {s:"40×60",  code:"ЧДСР000001",price:90, old:130},
+ {s:"60×70",  code:"ЧДСР00001", price:110,old:155},
+ {s:"70×100", code:"ЧДСР00002", price:130,old:185},
+ {s:"110×140",code:"ЧДСР00004", price:190,old:270},
+ {s:"100×200",code:"ЧДСР000051",price:260,old:370},
+ {s:"140×200",code:"ЧДСР00005", price:330,old:470}];
 var cur=0;
 function draw(){
   document.querySelectorAll('.sizes').forEach(function(c){
@@ -156,7 +157,10 @@ var ph=document.getElementById('ph');
 ph.addEventListener('input',function(){var d=ph.value.replace(/\D/g,'');if(d.indexOf('38')==0)d=d.slice(2);d=d.slice(0,10);
   var o='+38 ';if(d.length)o+='('+d.slice(0,3);if(d.length>3)o+=') '+d.slice(3,6);if(d.length>6)o+='-'+d.slice(6,8);if(d.length>8)o+='-'+d.slice(8,10);ph.value=d.length?o:''});
 ph.addEventListener('focus',function(){if(!ph.value)ph.value='+38 (0'});
-var TG_TOKEN='8445022293:AAFe3sicNbFqv7wFnfyq4brXUq7OjobyJ7M';   
+
+// ===== ВІДПРАВКА ЗАЯВКИ В TELEGRAM + ЛІД У META (FACEBOOK) =====
+// УВАГА: без сервера токен видно в коді сторінки. Використовуйте окремого бота тільки для заявок.
+var TG_TOKEN='8445022293:AAG_h4fuPQMsAzDd2o5-i2Maek3xi3F9PB0';   // від @BotFather
 var TG_CHAT_ID='567800143';    // ваш id або id групи
 document.getElementById('f').addEventListener('submit',function(e){
   e.preventDefault();
